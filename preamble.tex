@@ -1,5 +1,5 @@
 %\documentclass[a4pape, 14pt]{extarticle} % расширенный класс статьи с возможностью указать 14 шрифт
-\documentclass[a4pape, 12pt]{report}
+\documentclass[a4pape, 11pt]{extarticle}
 
 \usepackage{graphicx}  % поддержка .eps-графики
 \usepackage[utf8]{inputenc} % кодировка в которой набран текст 
@@ -15,6 +15,8 @@
 \usepackage{array} % для m{2cm} в таблицах
 \usepackage{blindtext} % случайный текст для заглушки
 
+\usepackage{pdfpages} % для вставки пдф файлов
+
 \usepackage{pgfplots} % построение графиков
 % We will externalize the figures
 %\usepgfplotslibrary{external}
@@ -22,7 +24,7 @@
 %\pgfplotsset{width=15cm,compat=1.5}
 
 
-\usepackage[left=2cm, right=2cm]{geometry} % установка полей
+\usepackage[left=2cm, right=2cm, top=1.5cm, bottom=1.5cm]{geometry} % установка полей
 
 \newcommand{\hup}{Принцип неопределенности Гейзенберга}
 \newcommand{\qe}{Квантовая запутанность}
