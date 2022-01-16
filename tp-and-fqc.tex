@@ -1,0 +1,64 @@
+\subsection{Article}
+
+\subsubsection*{Abstract}
+
+We present a new protocol for practical quantum cryptography, tailored for an implementation with weak coherent pulses. The key is obtained by a very simple time-of-arrival measurement on the data line; an interferometer is built on an additional monitoring line, allowing to monitor the presence of a spy (who would break coherence by her intervention). Against zero-error attacks (the analog of photon-number-splitting attacks), this protocol performs as well as standard protocols with strong reference pulses: the key rate decreases only as the transmission t of the quantum channel. We present also two attacks that introduce errors on the monitoring line: the intercept-resend, and a coherent attack on two subsequent pulses. Finally, we sketch several possible variations of this protocol.
+
+\subsubsection{INTRODUCTION}
+
+Quantum cryptography [1], or quantum key distribution (QKD), is probably the most mature field in quantum information, both in theoretical and in experimental advances. On the theoretical side, almost all QKD protocols have been proven to provide unconditional security in some regime; on the practical side, QKD has already reached the stage of commercial prototypes. Still,much work is needed. A big task consists in bringing both theory and applications in contact again: practical QKD systems do not fulfill all the requirements of unconditional security proofs (or, if you prefer, these proofs are still too abstract to cope with a practical system). Here, we address a different question: we aim for the most practical QKD system. Instead of looking for a new implementations of known protocols, we choose to start from scratch by inventing a new protocol. There are two basic requirement.
+
+1. The protocol must be easily implementable, say with the smallest number of standard telecom devices. Note that this requirement, as a side benefit, may simplify security studies: we have learnt in the recent years that any optical component can be regarded as a ”Trojan horse” because of its imperfections [2].
+
+2. The security of the system must be guaranteed by quantum physics, thence in some way quantum coherence must play a role.
+
+The goal of this paper is to illustrate this program by presenting such a system. the key is created in a data line that is probably the simplest one can think of —just measure the time of arrival of weak pulses. The intervention of a spy is checked interferometrically in a monitoring line. In Section II, we define precisely the protocol and stress its advantages. In Section III, we present a quantitative study of security. Finally, Section 4 presents a number of possible variations on the main idea.
+
+
+\subsubsection{THE PROTOCOL}
+
+Alice uses a mode-locked laser, producing pulses of mean photon-number u that are separated by a fixed and well-defined time τ ; with a variable attenuator, she can blocks some of the pulses (note that a more economical source would just consist of a cw laser followed by the variable attenuator). Each logical bit is encoded in a two-pulse sequence according to the rule.
+
+For instance, the eight-pulse sequence drawn in Fig. 1 codes for the four-bit string 0100 (read in temporal order, that is, from right to left). For small μ, the states|0 A i and |1 A i have a large overlap because of their vacuum component. Since the laser is mode-locked, there is a phase coherence between any two non-empty pulses.
+
+The pulses now propagate to Bob, on a quantum channel characterized by a transmission t = 10 −$\alpha$ d/10(a typical value for a in optical fibers is 0.2 dB/km).
+Bob’s setup first splits the pulses using a non-equilibrated beam-splitter with transmission coefficient t B. The pulses that are transmitted are used to establish the raw key (data line). To obtain the bit value, Bob has to distinguish unambiguously between the two non-orthogonal states.
+
+As well-known, unambiguous discrimination between two pure states can succeed with probability p ok = 1 −|h0 B |1 B i|; in the present case, the overlap is |h0 B |1 B i| = 2 e −|a| , and consequently p ok = 1 − e −u t t B . Now, there is an obvious way to achieve this result: photon counting with a perfect detector, because p ok is just the probability that the detector will detect something. The realistic situation where the detector has a finite efficiency n can be modelled by an additional beam-splitter with transmittivity n followed by a perfect detector; in this case, n appears in the exponent as well. In conclusion, the optimal unambiguous discrimination between |0 B i and |1 B i is achieved by the most elementary strategy, simply try to detect where the photons are. Later, Bob must announce Alice which items he has detected: this is how Alice and Bob establish their raw key. Note that no error is expected on this line, if the switch is perfect and in the absence of dark counts of the detector: a bit-flip is impossible because it would correspond to a photon jumping from a time-bin to another. Note that the simplicity of Bob’s data line has concrete practical advantages. There are no lossy and active elements. Hence, the transmission range can be increased and no random number generator is needed. As for the data line, our protocol is similar to the one of Debuisschert and Boucher [3]. However there, the security was obtained by the overlap in time between the pulses coding for different bits. Here, we use rather the monitoring line described in the next paragraph.
+
+The pulses that are reflected at Bob’s beam-splitter go to an interferometer that is used for monitoring Eve’s presence (monitoring line). Here is where quantum coherence plays a role. Let a j be the amplitude of pulse j entering the interferometer: in particular, |a j | 2 is either 0 or u t (1 − t B ); and if both a j and a j+1 are non-zero,then a j+1 = a j . After the interferometer, the pulses that reach the detectors at time j + 1.
+
+
+Now, if either a j or a j+1 are zero, then |D M1 | 2 =|D M2 | 2 = 12 u t (1 − t B ); i.e., conditioned to the fact that a photon takes the monitoring line, the probabilities of detecting it in either detector is 12 . However, if both a j and a j+1 are non-zero, then |D M1 | 2 = u t (1 − t B ) and|D M2 | 2 = 0: only detector D M1 can fire. Consider then again the case where bit number k is 1 and bit number k + 1 is 0: as we said above, in this case the two consecutive pulses 2k and 2k + 1 are non-empty. This means that, if coherence is not broken, detector D M2 cannot fire at time 2k + 1. If Eve happens to break the coherence by reading the channel, it could be detected this way.
+
+Actually, it turns out that, as just described, the protocol is insecure: Eve can make a coherent measurement of the number of photons in the two pulses across the bit-separation. With such an attack, she would not break the coherence, thus introduce no errors in the monitoring line, and obtain almost full information (see next Section for more details). There are several ways of countering this attack: here, we make use of decoy sequences, inspired by the idea of ”decoy states” introduced by Hwang[4] and by Lo and co-workers [5], but different in its implementation. The principle is the following: with probability f , Alice leaves both the (2k − 1)-th and the 2k-the pulses non-empty. A decoy sequence does not encode a bit value (in contrast to the decoy states of [4,5] that still encode a state, but in a different way): thence, if the item is detected in the data line, it will be discarded in public discussion. However, if a detection takes place in the monitoring line at time 2k, then it must be in detector D 1M because of coherence. Now Eve can no longer pass unnoticed: if she attacks coherently across the bit separation, then she breaks the coherence of the decoy sequences; if she attacks coherently within each bit, then she breaks the coherence across the separation; finally, if she makes a coherent attack on a larger number of pulses,then she breaks the coherence in fewer positions but gets much less information.
+
+Thus, errors are rare: they appear only in the monitoring line, and just for a fraction of the whole cases. Still,one can estimate the error (thence, the coherence of the channel) in a reasonable time, if the bit rate is high.
+
+Should one say in one sentence where the improvement lies, here it is: one can define a very simple data line and protect it quantum-mechanically. At this point, two important remarks can be done. First, this protocol cannot be analyzed in terms of qubits. This is obvious, because any bits and coherence are checked on differently defined pairs. In particular, there is not a ”natural” single-photon version of the protocol (simply replace non-empty coherent state with one photon Fock states would be dramatic, since all the sequences would become orthogonal). The second remark is the answer to a possible question. With the idea of a simple data line for key creation, and a ”complementary” line for monitoring, one may implement a version of the BB84 protocol: Alice and Bob agree to produce the key using only the Z basis; sometimes Alice prepares one of the eigenstates of the X basis that acts as a decoy state. Which are the advantages of our protocol? We are going to see that our protocol is much more robust against attacks at zero errors (the analog of photon number-splitting attacks).
+
+\subsubsection{QUANTITATIVE ANALYSIS OF SECURITY}
+
+For a reasonable comparison with experiment, we must introduce the following parameters
+
+1. The visibility V of the monitoring interferometer, whence the probability that D 2M fires in a time corresponding to a coherence is 1−V instead of zero. We suppose that Eve can take advantage of these imperfections: for instance, if the reduced visibility is due to fi 6 = 0 in the interferometer, Eve can systematically correct for this error by displacing the pulses, and then reproduce V by adding errors in a way that is profitable for her.
+
+2. The imperfections of the three Bob’s detectors, supposed to be identical for simplicity: the quantum efficiency n and the probability per gate of a dark count p d . Typical values are n = 10\%, p d = 10 −5 . These imperfections are not given to Eve (see Section IV on the possibility that Eve forces a detection, thus effectively setting n = 1 for some pulses).
+
+For simplicity in writing, we make all the quantitative analysis in the limit of small mean photon-number in Bob’s channel, that is ut << 1
+
+First, we compute the parameters of Alice-Bob on the data line. Bob’s detection rate in D B , once decoy sequences are removed, is where T = t t B η. In other words, R B times the number of two-pulse sequences sent by Alice is the length of the raw key.
+If we assume that the switch prepares really empty pulses when it is closed, the error expected in this line is only due to the dark counts of the detectors: Q=R because dark counts may make the detector fire at both times with equal probability. The mutual information Alice-Bob in bits per sent photon is thence. In what follows, we shall concentrate on attacks by Eve that do not modify Q. Before moving to that, let’s have a look at the monitoring line as well.
+
+In the presence of dark counts and reduced visibility, the meaningful detection probabilities in D M1 and D M2 , neglecting double counts are the following [6]: R2= 1/V.
+
+Contrary to the errors due to dark counts, the departure from perfect visibility will be entirely attributed to Eve. This is why we consider a priori different values V d and V 10 for the visibility in the two cases: as we shall see,Eve’s attacks may be different.
+
+
+
+\subsection{\trnas}
+sss
+\subsection{\review}
+ss
+\subsection{\dic}
+ss
