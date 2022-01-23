@@ -1,0 +1,71 @@
+\subsection{Article}
+
+\subsubsection*{Abstract}
+A quantum cryptographic protocol based in public key cryptography combinations and private key cryptography is presented. Unlike the BB84 protocol [1] and its many variants[2, 3], two quantum channels are used. The present research does not make reconciliation mechanisms of information to derive the key. A three related system of key distribution are described.
+
+\subsubsection{Introduction}
+In cryptography, the objective is to transmit information between two parties (Alice, Bob) that restrict access to an eavesdropper (Eve). In classical cryptography,the information is encrypted by a key which is kept in a secret or public way. The key is distributed among Alice and Bob to decrypt the message. Distribution the key remains a difficult issue. Quantum mechanics provides solutions with protocols that are largely determined by the following phases: preparation (Alice), measurement (Bob), verification and key derive (Alice and Bob).
+The last phase made public some details of the phases of preparation or measuring, this is called reconciliation mechanisms of information.
+This paper presents a quantum protocol based on public private key cryptography for secure transmission of data over a public channel. The security of the protocol derives from the fact that Alice and Bob each use secret keys in the multiple exchange of the qubit. Unlike the BB84 protocol [1] and its many variants[2, 3], Bob knows the key to transmit, the qubits are transmitted in only one direction and classical information exchanged thereafter, the communication in the proposed protocol remains quantum in each stage. In the BB84 protocol,each transmitted qubit is in one of four different states,in the proposed protocol, the transmitted qubit can be in any arbitrary states.
+
+\subsubsection{Protocol}
+
+Alice took a bit i transforming it in to an element of a secret base B k genering the qubit |$\psi$ i,k i, that sends to Bob through a quantum channel .
+1. Bob applies U j that is only known by him, to the qubit |$\psi$ i,k i, returns the resulting qubit to Alice .
+2. Alice measures the qubit in the base B k obtaining the bit.
+
+Using this, Bob denotes operation U 0 and U 1 to the identity operator I and XZ operator, respectively, where the bit j l is responsible for operation U j. The bit j, which was chosen by Bob and transmitted over a public channel, has reached Alice. Eve, the eavesdropper, cannot obtain any information by intercepting the transmitted qubits, although she could disrupt the exchange by replacing the transmitted qubits by her own. This can be detected by:
+1. appending parity bits, and/or
+2. appending previously chosen bit sequences, which could be the destination and sending addresses or their hashed values, or some other mutually agreed sequence.
+
+Since the B k and U j transformations can be changed as frequently as one pleases, Eve cannot obtain any statistical clues to their nature by intercepting the qubits.
+
+\subsubsection{Generalization}
+Only Bob is involved in the preparation phase of Key-Message this allows extended to three parties (Alice,Bob, Celine) unlike the standard protocols [7]. I Preparation Phase (Alice,Celine)II Preparation Phase Key-Message (Bob)III Measurement and derivation phase (Alice, Celine)
+1. Alice took a bit i transforming it in to an element of a secret base B k , Celine took a bit i transforming it in to an element of a secret base B t , both sendstheir qubit to Bob through a quantum channel.
+2. Bob applies U j secret operation on the qubits |$\psi$ i,k i and |$\psi$ s,t i returns qubits resulting to their respective parties
+3.Alice and Celine measures the qubits in the base B k and B t obtaining a value sent by Bob.
+
+Generalizing the protocol for n parties, where Bob is central, a quantum key-message distribution network will be obtained.
+
+\subsubsection{Conclusion}
+The quantum protocol presented with its variants provides a safe sending of information of direct communication between two or more parties. The generalizations for n parties can create a network of massive sending information for n - 1 parties being one of them the key-message distribution center. This protocol is used to distribute applications key-messages safe over long distances because it allows the sending of massive qubits. Since the proposed protocol does not use classical communication,it is immune to the man-in-the-middle attack on the classical communication channel which BB84 type quantum cryptography protocols suffers from [8]. On the other hand, implementation of this protocol may be harder because the qubits get exchanged multiple times.
+
+\subsection{\trnas}
+
+
+\subsubsection*{Аннотация}
+Представлен квантовый криптографический протокол, основанный на комбинации криптографии с открытым ключом и криптографии с закрытым ключом. В отличие от протокола BB84 [1] и его многочисленных вариантов[2, 3], используются два квантовых канала. В данном исследовании не используются механизмы сверки информации для получения ключа. Описаны три связанные системы распределения ключей.
+
+\subsubsection{Введение}
+В криптографии целью является передача информации между двумя сторонами (Алиса, Боб), которая ограничивает доступ подслушивающего устройства (Ева). В классической криптографии информация шифруется ключом, который хранится в секрете или в открытом виде. Ключ распределяется между Алисой и Бобом для расшифровки сообщения. Распределение ключа остается сложной проблемой. Квантовая механика предлагает решения с помощью протоколов, которые в основном определяются следующими фазами: подготовка (Алиса), измерение (Боб), проверка и получение ключа (Алиса и Боб).
+На последнем этапе были обнародованы некоторые детали фаз подготовки или измерения, это называется механизмами согласования информации.
+В данной работе представлен квантовый протокол, основанный на криптографии с открытым закрытым ключом, для безопасной передачи данных по общедоступному каналу. Безопасность протокола вытекает из того факта, что Алиса и Боб используют секретные ключи при многократном обмене кубитами. В отличие от протокола BB84 [1] и его многочисленных вариантов[2, 3], в котором Боб знает ключ для передачи, кубиты передаются только в одном направлении и после этого происходит обмен классической информацией, коммуникация в предлагаемом протоколе остается квантовой на каждом этапе. В протоколе BB84 каждый передаваемый кубита находится в одном из четырех различных состояний, в предлагаемом протоколе передаваемый кубита может находиться в любом произвольном состоянии.
+
+\subsubsection{Протокол}
+
+Алиса берет бит i, преобразуя его в элемент секретной базы B k, генерируя кубит |$\psi$ i,k i, который отправляет Бобу по квантовому каналу.
+1. Боб применяет U j, известное только ему, к кубиту |$\psi$ i,k i, возвращает полученный кубит Алисе.
+2. Алиса измеряет кубит в базе B k, получая бит.
+
+Используя это, Боб обозначает операции U 0 и U 1 операторами тождества I и XZ соответственно, где бит j l отвечает за операцию U j. Бит j, выбранный Бобом и переданный по общедоступному каналу, достиг Алисы. Ева, подслушивающее лицо, не может получить никакой информации, перехватив переданные кубиты, хотя она может нарушить обмен, заменив переданные кубиты своими собственными. Это можно обнаружить следующим образом:
+1. добавление битов четности
+2. добавление ранее выбранных битовых последовательностей, которые могут быть адресами назначения и отправки или их хэшированными значениями, или какой-либо другой взаимно согласованной последовательностью.
+
+Поскольку преобразования B k и U j могут меняться сколь угодно часто, Ева не может получить никаких статистических подсказок об их природе, перехватывая кубиты.
+
+\subsubsection{Обобщение}
+В фазе подготовки ключа-сообщения участвует только Боб, что позволяет расширить ее до трех сторон (Алиса, Боб, Селин) в отличие от стандартных протоколов [7]. I Фаза подготовки (Алиса, Селин)II Фаза подготовки ключа-сообщения (Боб)III Фаза измерения и получения (Алиса, Селин)
+1. Алиса взяла бит i, преобразовав его в элемент секретной базы B k , Селин взяла бит i, преобразовав его в элемент секретной базы B t , обе отправили свои кубиты Бобу по квантовому каналу.
+2. Боб применяет секретную операцию U j к кубитам |$\psi$ i,k i и |$\psi$ s,t i и возвращает полученные кубиты соответствующим сторонам.
+3.Алиса и Селин измеряют кубиты в базе B k и B t, получая значение, посланное Бобом.
+
+Обобщая протокол на n сторон, где Боб является центральной, будет получена квантовая сеть распределения ключей-сообщений.
+
+\subsubsection{Вывод}
+Представленный квантовый протокол с его вариантами обеспечивает безопасную пересылку информации прямой связи между двумя или более сторонами. Обобщения для n сторон могут создать сеть массовой пересылки информации для n - 1 сторон, одна из которых является центром распределения ключевых сообщений. Этот протокол используется для безопасного распространения прикладных ключевых сообщений на большие расстояния, поскольку позволяет пересылать массивные кубиты. Поскольку предложенный протокол не использует классическую связь, он не подвержен атаке "человек посередине" на классический канал связи, от которой страдают протоколы квантовой криптографии типа BB84 [8]. С другой стороны, реализация этого протокола может быть сложнее, поскольку кубиты обмениваются несколько раз.
+
+\subsection{\review}
+ss
+\subsection{\dic}
+ss
