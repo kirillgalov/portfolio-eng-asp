@@ -133,6 +133,166 @@ The reason why the task of the eavesdropper is made more difficult with this sys
 Причина, по которой задача подслушивающего усложняется с помощью этой системы, заключается в том, что она сочетает в себе сильные стороны двух систем, на основе которых она построена: как и в 4-статусной системе, Ева не знает базиса, используемого Алисой и Бобом; как и в 2-статусной системе, она не может с уверенностью отличить два неортогональных состояния. Стоит отметить, что обычная реализация 4-позиционной системы со слабыми импульсами фактически удовлетворяет этим двум критериям. Слабые импульсы с ортогональными поляризациями не являются ортогональными в гильбертовом пространстве из-за их общей вакуумной компоненты. Ингредиент, которого не хватает в этой системе, - это использование сильного опорного импульса при обнаружении, который гарантирует, что Ева должна послать сигнал Бобу, даже если она не смогла получить никакой информации о сигнале, посланном Алисой. Когда это добавляется в систему, использование слабых импульсов становится преимуществом для легитимных пользователей. Действительно, одна из экспериментальных реализаций квантовой криптографии, основанная на интерферометрической схеме [7], несколько похожа на предложенную нами реализацию (см. рис. 1). Основное различие между этими двумя схемами заключается в том, что в [7] не используется сильный опорный импульс (в их установке |b| 2 = |a| 2 , а делитель луча BS1 заменен зеркалом). Поэтому, как подчеркивалось выше, их схема не использует преимущества неортогональности слабых импульсов. Всякий раз, когда она получает неудовлетворительный результат при попытке подслушивания, Ева может просто заблокировать передачу и ничего не посылать Бобу. Поэтому небольшая модификация существующего эксперимента может обеспечить гораздо более безопасную схему.
 
 \subsection{\review}
-ss
+
+The BB84 and E91 protocols share a common vulnerability: the photon number splitting attack. Modern lasers used as a photon source are not perfect. They can emit more than one photon at a time. This allows an attacker to intercept some of the photons and gain access to sensitive information without introducing additional noise into the channel.
+
+In [1] the authors presented a 4+2 protocol in which they tried to solve the photon splitting attack problem. The authors took the BB84 protocol as a basis and modified it by taking the ideas of the E92 protocol. As a result of combining the protocols, photons had to be polarized at special combinations of angles, which prevented an attacker from accessing sensitive information when intercepting a photon.
+
+However, further work showed a modified photon number splitting attack that broke the protection of this protocol.
+
 \subsection{\dic}
-ss
+\begin{multicols}{2}
+\begin{itemize}
+
+\item algorithms - алгоритм
+\item analysis - анализ
+
+\item appropriate - подходящий
+\item approximately - примерно
+
+
+\item basis - основа
+\item beam - луч
+
+\item binary - двоичных
+\item bit - бит
+
+\item capacity - вместимость
+
+\item channel - канал
+
+\item coherent - связный
+\item combination - комбинации
+
+\item communication - связь
+\item compare - сравнить
+
+\item computation - вычисления
+\item computers - компьютеров
+
+\item condition - условие
+\item conjugate - спряжение
+\item considered - рассмотрено
+\item contain - содержат
+
+\item correlation - корреляция
+
+\item cryptography - криптография
+
+\item decode - декодировать
+\item decoy - ловушка
+\item density - плотность
+
+\item dependence - зависимость
+\item detect - обнаружить
+
+\item deterministic - детерминированный
+
+\item developing - разработка
+
+\item difference - разница
+
+\item differentiate - дифференцировать
+
+\item distribution - распределение
+
+\item eavesdropper - подслушиватель
+
+\item encoded - закодировано
+\item entaglement - запутанность
+\item equivalently - эквивалентно
+
+\item imperfections - недостаток
+\item implementation - реализация
+
+\item instances - экземпляров
+
+\item intensity - интенсивность
+\item intercept - перехват
+
+\item interferometer - интерферометр
+
+\item limitation - ограничение
+
+\item lossless - без потерь
+\item lossy - потери
+
+\item malicious - вредоносных
+\item managed - управляемых
+
+\item mathematical - математических
+\item matrix - матрица
+
+\item measurement - измерения
+
+\item method - метод
+\item mimic - имитировать
+
+\item modification - модификация
+
+\item neglected - пренебрегают
+
+\item normalized - нормализовано
+
+\item operator - оператор
+\item optical - оптический
+\item optimal - оптимальный
+
+\item optional - опционально
+
+\item orthogonal - ортогональный
+\item orthogonality - ортогональность
+\item orthonormal - ортонормированный
+
+\item phase - фаза
+\item photon - фотон
+
+\item polarization - поляризация
+
+
+\item probabilistic - вероятностный
+\item probability - вероятность
+\item problem - проблема
+
+\item projecting - проектирование
+
+\item property - свойство
+\item proportion - пропорция
+\item proposal - предложение
+
+\item protocol - протокол
+
+\item prove - доказательство
+
+\item provide - обеспечить
+\item provides - обеспечивает
+
+\item public - общедоступных
+\item pulse - импульс
+
+\item quantum - квантовый
+\item random - случайных
+\item randomize - рандомизировать
+
+\item signature - подпись
+
+\item strategy - стратегия
+
+\item string - строка
+
+\item symmetric - симметричный
+
+\item theoretical - теоретический
+\item theory - теория
+
+\item transmission - передача
+
+\item vacuum - вакуум
+\item value - значение
+
+\item variable - переменная
+
+
+
+\end{itemize}
+\end{multicols}
