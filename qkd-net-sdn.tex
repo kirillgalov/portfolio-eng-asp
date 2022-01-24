@@ -1,0 +1,46 @@
+\subsection{Article}
+
+\subsubsection*{Abstract}
+
+As an important support for quantum communication, quantum key distribution (QKD)networks have achieved a relatively mature level of development, and they face higher requirements for multi-user end-to-end networking capabilities. Thus, QKD networks need an effective management plane to control and coordinate with the QKD resources. As a promising technology, software defined networking (SDN) can separate the control and management of QKD networks from the actual forwarding of the quantum keys. This paper systematically introduces QKD networks enabled by SDN, by elaborating on its overall architecture, related interfaces, and protocols. Then, three-use cases are provided as important paradigms with their corresponding schemes and simulation performances.
+
+\subsubsection{Introduction}
+
+With rapid developments in Internet of Things technology, more secure communication forusers is required with increasing demands in information networks, so as to overcome perceivedsecurity threats as much as possible. As a promising technology, quantum key distribution (QKD)has been proven to provide users with secure keys exploiting the laws of quantum physics, i.e.,Heisenberg’s uncertainty principle and no-cloning theorem [1]. These features allow two users toknow if there is any eavesdropping during the communication process between them [2]. To extendQKD for multiple users, QKD networks have been studied and developed around the world in thepast decades, which mainly uses laying fibers as basic transmission medium to serve security demandswith secret-key provisioning [3–5]. Furthermore, the construction of QKD backbones and metro-areanetworks currently has been launched with large investment, and their development is attracting greatattention around world.
+Traditional QKD is limited to point-to-point connectivity in the physical layer, using resourceslike wavelengths and time slices having different capacities depending on the point-to-point QKDdemand. A QKD network however, needs the ability to allocate different resources in a global mannerusing a unified control plane for the easier operation. To address this problem, software-definednetworking (SDN) has gained popularity by dividing networks into data plane and control plane andsupporting programmability of network functionalities [6,7]. The core idea of SDN is to realize flexiblecontrol of traffic and make the network more intelligent by separating control and data planes. Thecontrol plane can grasp the global network view and make it convenient for operators to manageAppl. Sci. 2019, 9, 2081; doi:10.3390/app9102081www.mdpi.com/journal/applsciAppl. Sci. 2018, 8, x FOR PEER REVIEW
+2 of 12and upgrade the network efficiently. In the coming years, QKD networks enabled by SDN will be animportant scenario for developing multi-user cases. On the one hand, QKD networks can beAppl. Sci. 2019, 9, 2081
+2 of 12controlled by SDN for the unified interaction of network devices and protocols [8]; on the other, QKDcan be a secure solution for SDN-based networks [9]. Therefore, there are some researches focusedandupgradethe networkefficiently.
+In the A comingyears, QKDnetworksenabledby SDN willbe anon thetopicsof QKDnetworkswith SDN.
+QKD-enabledopticalnetworkarchitectureis proposedimportantscenariofordevelopingmulti-usercases.
+Ontheonehand,QKDnetworkscanbecontrolledto add an additional layer, i.e., QKD layer, for secret keys in software-defined optical networksby SDN for the unified interaction of network devices and protocols [8]; on the other, QKD can be(SDONs) [10]. Moreover, some key-assignment schemes are developed to secure control signals anda secure solution for SDN-based networks [9]. Therefore, there are some researches focused on thedata services and enhance their security in SDONs [11–13] with wavelength division multiplexingtopics of QKD networks with SDN. A QKD-enabled optical network architecture is proposed to add(WDM)[14] and optical time division multiplexing (OTDM) [15,16]. However, there is a lack ofan additional layer, i.e., QKD layer, for secret keys in software-defined optical networks (SDONs) [10].
+studiesaddressingsecret-keyallocationwith centralizedcontroland andcoordinationof theMoreover, some systematickey-assignmentschemesare developedto secure controlsignalsdata servicesQKD andresources.
+enhance their security in SDONs [11–13] with wavelength division multiplexing (WDM) [14] andIn this timepaper,by introducingtechnologyinto the theremanagementQKD addressingnetworks, weopticaldivisionmultiplexing SDN(OTDM)[15,16]. However,is a lack of of studiessystematicsecret-keyallocation withcentralizedcontroland coordinationof the QKDresources.
+carefullydescribedthe architectureof QKDnetworksenabledby SDN, includingavailableinterfacesIn thisby introducingSDNtechnologythe inmanagementof QKD wenetworks,weand protocolsin paper,the networks.
+To solvethreeimportant intoissuesQKD networking,have designedcarefullydescribedthearchitectureofQKDnetworksenabledbySDN,includingavailableinterfacesmulti-resources allocation, secret-key management and survivability guarantee to provide referenceand Toprotocolsin thenetworks.
+To solve details,three importantissuesin QKD networking,we follows.
+have designedresults.
+explainthesewith specificwe havestructuredthe paper asSection 2multi-resources allocation, secret-key management and survivability guarantee to provide referenceintroducesrecent progresses of QKD networks, and Section 3 describes the architecture of QKDresults. To explain these with specific details, we have structured the paper as follows. Section 2networks enabled by SDN. The related interfaces and protocols in QKD networks enabled by SDNintroduces recent progresses of QKD networks, and Section 3 describes the architecture of QKDare shownin Section 4. Section 5 presents three useful cases in QKD networks enabled by SDN.
+networks enabled by SDN. The related interfaces and protocols in QKD networks enabled by SDN areSection
+6
+finallyconcludesthis 5 presentspaper. three useful cases in QKD networks enabled by SDN. Section 6shown in Section
+4. Sectionfinally concludes this pape
+
+\subsection{\trnas}
+\subsubsection*{Аннотация}
+
+Существует большой интерес к квантовому распределению ключей. Экспериментально было успешно выполнено 
+
+\subsubsection{Введение}
+
+Квантовое распределение ключей (QKD)
+
+\subsection{\review}
+Some scientists mistakenly believe that this [6] paper presented a new protocol, but in fact the authors showed a new quantum trap method. The authors of the paper used the method together with the BB84 protocol, but they also claim that it can be used with any quantum key distribution protocol.
+
+The essence of the method is that along with photons containing confidential information, trap photons are sent through the communication channel. They do not contain any meaningful information. When an intruder reads a phototrap, he increases the amount of noise in the communication channel, thereby giving himself away, and does not receive any confidential information.
+
+As a result, the authors were able to increase the distance of secure transmission of information over a quantum communication channel from 30 km to 150 km.
+
+
+\subsection{\dic}
+\input{dictionary}
